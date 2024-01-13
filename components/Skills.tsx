@@ -6,7 +6,7 @@ import { buttonVariants } from "./ui/button";
 
 const Skills = () => {
   return (
-    <section id="skills" className="group mb-28">
+    <section id="skills" className="group mb-28 scroll-mt-28">
       <h2 className="font-bold text-3xl mb-8 title-bottom-line">My Skills</h2>
 
       <div className="flex gap-2 flex-wrap">

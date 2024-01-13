@@ -6,7 +6,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon, OpenInNewWindowIcon, PinBottomIcon } 
 
 const Intro = () => {
   return (
-    <section id="home" className="my-32 self-start">
+    <section id="home" className="my-32 self-start scroll-mt-[100rem]">
       <h1 className="text-center flex flex-col justify-start items-start">
         <span className="font-bold text-6xl pb-2 justify-start">{"Hello,I'm Vansh."}</span>
         <span className="font-bold text-5xl pb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
