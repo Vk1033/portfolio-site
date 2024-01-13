@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon, OpenInNewWindowIcon, PinBottomIcon } from "@radix-ui/react-icons";
 
 const Intro = () => {
   return (
@@ -17,10 +17,15 @@ const Intro = () => {
       </h1>
       <div className="flex justify-start mt-4 space-x-4 ">
         <Button className="rounded-full hover:bg-gray-300  hover:scale-110 transition" asChild>
-          <Link href="#contact">Contact me here</Link>
+          <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=kinkarvansh@gmail.com" target="_blank">
+            Contact me here &nbsp; <OpenInNewWindowIcon className="h-full w-full" />
+          </Link>
         </Button>
         <Button className="rounded-full  hover:scale-110 transition" variant={"outline"} asChild>
-          <Link href="#contact">Download CV</Link>
+          <Link href="/public/CV.pdf" download>
+            Download CV &nbsp;
+            <PinBottomIcon className="h-full w-full" />
+          </Link>
         </Button>
         <Button className="rounded-full hover:scale-110 transition" variant={"outline"} size={"icon"} asChild>
           <Link href="https://github.com/Vk1033" target="_blank">
