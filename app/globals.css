@@ -64,21 +64,6 @@
     --input: 215 27.9% 16.9%;
     --ring: 216 12.2% 83.9%;
   }
-  .custom-gradient {
-    background-image: linear-gradient(
-      0deg,
-      hsl(221deg 39% 11%) 43%,
-      hsl(221deg 33% 13%) 84%,
-      hsl(220deg 28% 16%) 94%,
-      hsl(219deg 25% 18%) 99%,
-      hsl(219deg 22% 21%) 101%,
-      hsl(218deg 20% 23%) 102%,
-      hsl(217deg 18% 26%) 102%,
-      hsl(216deg 16% 29%) 101%,
-      hsl(216deg 15% 31%) 101%,
-      hsl(215deg 14% 34%) 100%
-    );
-  }
 }
 
 @layer base {
@@ -91,10 +76,6 @@
 }
 
 @layer components {
-  /* .gradient-text {
-    @apply bg-gradient-primary bg-clip-text text-transparent;
-  } */
-
   .title-bottom-line {
     @apply relative mb-7 inline-block border-b-2 border-dashed border-muted-foreground text-xl font-bold text-foreground no-underline after:absolute after:-bottom-[3px] after:left-0 after:h-1 after:w-0 after:bg-gradient-to-r  after:from-indigo-500 after:via-purple-500 after:to-pink-500  after:transition-all after:duration-300 group-hover:after:w-full;
   }

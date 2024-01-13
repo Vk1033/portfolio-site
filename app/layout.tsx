@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import ModeToggle from "@/components/ModeToggle";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +15,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} custom-gradient dark:text-gray-150 min-h-screen`}>
+      <body className={cn(inter.className, "bg-background dark:text-gray-150 min-h-screen cursor-default")}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
           {children}
-          <footer className="fixed bottom-4 right-4">
-            <ModeToggle />
-          </footer>
+          <footer className="fixed bottom-4 right-4"></footer>
         </ThemeProvider>
       </body>
     </html>

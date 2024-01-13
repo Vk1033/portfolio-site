@@ -8,24 +8,26 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { links } from "@/lib/data";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
+import ModeToggle from "@/components/ModeToggle";
 
 export default function Header() {
   return (
-    <header className="z-[99] relative h-24 ">
-      <nav className="fixed top-6  left-1/2 -translate-x-1/2 h-[3.25rem] p-4 flex justify-center items-center rounded-full border border-black bg-gray-950 bg-opacity-75">
-        <NavigationMenu>
-          <NavigationMenuList className="gap-5 ">
-            {links.map((link) => (
-              <NavigationMenuItem key={link.hash}>
-                <NavigationMenuLink className={twMerge(navigationMenuTriggerStyle(), "rounded-full p-3")} href={link.hash}>
-                  {link.name}
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-      </nav>
+    <header className="z-[99] relative h-24 flex flex-col">
+      <NavigationMenu className="fixed h-14 max-w-full w-full self-center bg-gray-950 bg-opacity-75 flex backdrop-blur-sm">
+        <NavigationMenuList className="relative gap-5 max-w-3xl p-4 w-[48rem] justify-start">
+          {links.map((link) => (
+            <NavigationMenuItem key={link.hash}>
+              <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "rounded-full p-3")} href={link.hash}>
+                {link.name}
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          ))}
+          <NavigationMenuItem className="absolute right-4">
+            <ModeToggle />
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </header>
   );
 }

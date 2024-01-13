@@ -6,7 +6,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 const Intro = () => {
   return (
-    <section id="home" className="mt-24 ">
+    <section id="home" className="my-32 self-start">
       <h1 className="text-center flex flex-col justify-start items-start">
         <span className="font-bold text-6xl pb-2 justify-start">{"Hello,I'm Vansh."}</span>
         <span className="font-bold text-5xl pb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -32,9 +32,6 @@ const Intro = () => {
             <LinkedInLogoIcon className="h-full w-full p-1.5" />
           </Link>
         </Button>
-      </div>
-      <div className="flex flex-col">
-        <div className="bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block dark:bg-opacity-20 self-center"></div>
       </div>
     </section>
   );
