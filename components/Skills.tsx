@@ -17,7 +17,7 @@ const Skills = () => {
         ))}
       </div>
       <div className="flex flex-col">
-        <div className="bg-gray-200 mt-16 h-16 w-1 rounded-full hidden sm:block dark:bg-opacity-20 self-center"></div>
+        <div className="bg-gray-200 mt-16 h-16 w-1 rounded-full dark:bg-opacity-20 self-center"></div>
       </div>
     </section>
   );
