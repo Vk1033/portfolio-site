@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import ModeToggle from "@/components/ModeToggle";
 import Link from "next/link";
 import { HomeIcon } from "@radix-ui/react-icons";
+import NavDropDown from "./NavDropDown";
 
 export default function Header() {
   return (
@@ -16,15 +17,18 @@ export default function Header() {
           </Link>
           {links.map((link) => (
             <span key={link.hash} className="hidden sm:block">
-              <Link className={cn("ml-2 mt-1 bg-transparent text-base link-hover")} href={link.hash}>
+              <Link className={cn("ml-2 mt-1 bg-transparent text-base link-hover text-muted-foreground hover:text-foreground")} href={link.hash}>
                 {link.name}
               </Link>
             </span>
           ))}
-          <span className="basis-full" />
-          <span className="sm:mr-6 mr-4">
+          <div className="basis-full" />
+          <div className="sm:mr-6 mr-3 flex gap-3">
             <ModeToggle />
-          </span>
+            <div className="sm:hidden">
+              <NavDropDown />
+            </div>
+          </div>
         </div>
       </nav>
     </header>
